@@ -13,10 +13,10 @@ RUN mkdir /config /mydata
 COPY *.conf /config/
 
 # add a non-root user and group called "rio" with no password, no home dir, no shell, and gid/uid set to 1000
-RUN addgroup -g 1000 dacian && adduser -D -H -G dacian -s /bin/false -u 1000 dacian
+RUN addgroup -g 1000 USERNAME && adduser -D -H -G USERNAME -s /bin/false -u 1000 USERNAME
 
 # create a samba user matching our user from above with a very simple password ("dedi")
-RUN echo -e "dedi\ndedi" | smbpasswd -a -s -c /config/smb.conf dacian
+RUN echo -e "PASSWORD\nPASWWORD" | smbpasswd -a -s -c /config/smb.conf USERNAME
 
 # volume mappings
 VOLUME /config /mydata
