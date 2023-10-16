@@ -1,0 +1,209 @@
+pageInfo:
+  title: Home Lab
+sections:
+  - name: Network
+    items:
+      - title: Portainer
+        description: Docker manager
+        icon: hl-portainer
+        url: https://10.10.10.30:9443
+        target: newtab
+        id: 0_746_portainer
+      - title: Pfsense
+        description: Router
+        icon: hl-pfsense
+        url: https://10.10.10.1:444/
+        target: newtab
+        id: 1_746_pfsense
+      - title: Unifi
+        description: Unifi Local
+        icon: hl-unifi
+        url: https://10.10.10.117
+        target: newtab
+        id: 2_746_unifi
+      - title: Nginx Proxy Manager
+        description: Nginx Proxy Manager
+        icon: hl-nginxproxymanager
+        url: http://10.10.10.30:81/
+        target: newtab
+        id: 3_746_nginxproxymanager
+      - title: SABnzbd
+        description: SABnzbd
+        icon: hl-sabnzbd
+        url: http://10.10.10.30:8282/
+        target: newtab
+        id: 4_746_sabnzbd
+      - title: qBittorrent
+        description: qBittorrent
+        icon: hl-qbittorrent
+        url: http://10.10.10.30:8180/
+        target: newtab
+        id: 5_746_qbittorrent
+      - title: PHP MyAdmin
+        description: PHP MyAdmin
+        icon: hl-phpmyadmin
+        url: http://10.10.10.30:9090/
+        id: 6_746_phpmyadmin
+    displayData:
+      sortBy: default
+      rows: 2
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Apps
+    items:
+      - title: Navidrome
+        description: Music
+        icon: hl-navidrome
+        url: https://music.cjtmedia.au/
+        target: newtab
+        id: 0_404_navidrome
+      - title: Photo Prism
+        description: Photos
+        icon: hl-photoprism
+        url: http://10.10.10.30:2342
+        target: newtab
+        id: 1_404_photoprism
+      - title: Jellyfin
+        description: Movies and TVs
+        icon: hl-jellyfin
+        url: http://10.10.10.30:8096/
+        target: newtab
+        id: 2_404_jellyfin
+      - title: File Browser
+        description: File Browser
+        icon: hl-filebrowser
+        url: https://fb.cjtmedia.au/
+        target: newtab
+        id: 3_404_filebrowser
+      - title: Wetty
+        description: Web console
+        icon: hl-wetty
+        url: http://10.10.10.30:3001/
+        target: newtab
+        id: 4_404_wetty
+      - title: Gitea
+        description: 'Git '
+        icon: hl-gitea
+        url: http://10.10.10.30:3002/
+        target: newtab
+        id: 5_404_gitea
+      - title: VaultWarden
+        description: Password Manager
+        icon: hl-vaultwarden
+        url: https://vw.cjtmedia.au/
+        target: newtab
+        id: 6_404_vaultwarden
+  - name: Silver Info
+    widgets:
+      - type: gl-current-cpu
+        options:
+          hostname: http://10.10.10.30:61208
+        id: 0_1057_glcurrentcpu
+      - type: gl-current-mem
+        options:
+          hostname: http://10.10.10.30:61208
+        id: 1_1057_glcurrentmem
+  - name: Local
+    widgets:
+      - type: weather
+        options:
+          apiKey: 9c0e2c62383f455f2989a793889968bf
+          city: Melbourne,AU
+          units: metric
+          hideDetails: false
+        id: 0_491_weather
+      - type: clock
+        options:
+          timeZone: Australia/Melbourne
+          format: en-DE
+          hideDate: false
+            #use12Hour: false
+        id: 1_491_clock
+      - type: clock
+        options:
+          timeZone: Europe/Bucharest
+          format: en-DE
+          hideDate: false
+            #use12Hour: false
+        id: 2_491_clock
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Starr
+    icon: hl-bazarr
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Lidarr
+        description: Music
+        icon: hl-lidarr
+        url: http://10.10.10.30:8686/
+        target: newtab
+        id: 0_524_lidarr
+      - title: Radarr
+        description: Movies
+        icon: hl-radarr
+        url: http://10.10.10.30:7878/
+        target: newtab
+        id: 1_524_radarr
+      - title: Sonarr
+        description: TV Shows
+        icon: hl-sonarr
+        url: http://10.10.10.30:8989/
+        target: newtab
+        id: 2_524_sonarr
+      - title: Prowlarr
+        description: Indexer
+        icon: hl-prowlarr
+        url: http://10.10.10.30:9696/
+        target: newtab
+        id: 3_524_prowlarr
+appConfig:
+  theme: callisto
+  language: en
+  layout: auto
+  iconSize: large
+  startingView: default
+  defaultOpeningMethod: newtab
+  statusCheck: false
+  statusCheckInterval: 0
+  faviconApi: allesedv
+  routingMode: history
+  enableMultiTasking: false
+  widgetsAlwaysUseProxy: false
+  webSearch:
+    disableWebSearch: false
+    searchEngine: duckduckgo
+    openingMethod: newtab
+    searchBangs: {}
+  enableFontAwesome: true
+  enableMaterialDesignIcons: false
+  hideComponents:
+    hideHeading: false
+    hideNav: false
+    hideSearch: false
+    hideSettings: false
+    hideFooter: false
+  auth:
+    enableGuestAccess: false
+    users: []
+    enableKeycloak: false
+  showSplashScreen: false
+  preventWriteToDisk: false
+  preventLocalSave: false
+  disableConfiguration: false
+  disableConfigurationForNonAdmin: false
+  allowConfigEdit: true
+  enableServiceWorker: false
+  disableContextMenu: false
+  disableUpdateChecks: false
+  disableSmartSort: false
+  enableErrorReporting: false

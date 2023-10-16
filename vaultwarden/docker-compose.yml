@@ -1,0 +1,1 @@
+docker run -d --name vaultwarden -v ./data/:/data/ -p 9080:80 vaultwarden/server:latest
